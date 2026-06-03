@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Memory Card Game - 2 Player Race</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="split-container">
+        <!-- Player 1 Screen (Left) -->
+        <div class="player-screen player1-screen">
+            <div class="screen-header">
+                <h2>🎮 Player 1</h2>
+            </div>
+            
+            <div class="controls-section">
+                <h3>Your Controls</h3>
+                <div class="controls-grid">
+                    <div class="control-item">
+                        <kbd>W</kbd><span>UP</span>
+                    </div>
+                    <div class="control-item">
+                        <kbd>S</kbd><span>DOWN</span>
+                    </div>
+                    <div class="control-item">
+                        <kbd>A</kbd><span>LEFT</span>
+                    </div>
+                    <div class="control-item">
+                        <kbd>D</kbd><span>RIGHT</span>
+                    </div>
+                    <div class="control-item">
+                        <kbd>SPACE</kbd><span>FLIP</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="game-area-p1">
+                <div class="game-board" id="gameBoard1"></div>
+                <div class="player-stats">
+                    <p>Matches: <span id="p1-matches">0</span>/6</p>
+                    <p id="p1-status" class="status"></p>
+                </div>
+            </div>
+
+            <button class="reset-btn" onclick="resetGames()">Reset Game</button>
+        </div>
+
+        <!-- Player 2 Screen (Right) -->
+        <div class="player-screen player2-screen">
+            <div class="screen-header">
+                <h2>🎮 Player 2</h2>
+            </div>
+            
+            <div class="controls-section">
+                <h3>Your Controls</h3>
+                <div class="controls-grid">
+                    <div class="control-item">
+                        <kbd>↑</kbd><span>UP</span>
+                    </div>
+                    <div class="control-item">
+                        <kbd>↓</kbd><span>DOWN</span>
+                    </div>
+                    <div class="control-item">
+                        <kbd>←</kbd><span>LEFT</span>
+                    </div>
+                    <div class="control-item">
+                        <kbd>→</kbd><span>RIGHT</span>
+                    </div>
+                    <div class="control-item">
+                        <kbd>ENTER</kbd><span>FLIP</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="game-area-p2">
+                <div class="game-board" id="gameBoard2"></div>
+                <div class="player-stats">
+                    <p>Matches: <span id="p2-matches">0</span>/6</p>
+                    <p id="p2-status" class="status"></p>
+                </div>
+            </div>
+
+            <button class="reset-btn" onclick="resetGames()">Reset Game</button>
+        </div>
+    </div>
+
+    <div id="winner-modal" class="modal hidden">
+        <div class="modal-content">
+            <h2 id="winner-text">🏆 Player 1 Wins! 🏆</h2>
+            <p id="winner-time"></p>
+            <button onclick="resetGames()">Play Again</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
