@@ -1,0 +1,3 @@
+hello,file!
+this is line 2.
+c++ file handling is easy!

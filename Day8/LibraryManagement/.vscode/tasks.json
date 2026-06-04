@@ -1,0 +1,25 @@
+{
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"label": "Build and Run LibrarySystem",
+			"type": "shell",
+			"command": "cd",
+			"args": [
+				"c:\\Users\\CEC\\Desktop\\cec-_parvam_c\\Day8\\LibraryManagement",
+				"&&",
+				"g++",
+				"-std=c++17",
+				"-Wall",
+				"-Wextra",
+				"-o",
+				"LibrarySystem",
+				"Book.cpp",
+				"Library.cpp",
+				"main.cpp",
+				"&&",
+				"LibrarySystem.exe"
+			]
+		}
+	]
+}
